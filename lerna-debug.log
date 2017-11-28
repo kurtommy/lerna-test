@@ -16,161 +16,69 @@
 15 silly getUpdates
 16 info Checking for updated packages...
 17 silly hasTags
-18 verbose hasTags false
-19 info Comparing with initial commit.
-20 verbose updated tom-app1
-21 verbose updated tom-app2
-22 verbose updated tom-lib1
-23 verbose updated tom-lib2
-24 info Checking for prereleased packages...
-25 silly collectDependents
-26 silly isPackageDependentOf tom-app1 tom-app1
-27 silly isPackageDependentOf tom-lib1 tom-app1
-28 silly isPackageDependentOf tom-lib2 tom-app1
-29 silly isPackageDependentOf tom-app1 tom-app2
-30 silly isPackageDependentOf tom-lib1 tom-app2
-31 silly isPackageDependentOf tom-lib2 tom-app2
-32 silly isPackageDependentOf tom-app1 tom-lib1
-33 verbose dependent tom-app1 depends on tom-lib1
-34 silly isPackageDependentOf tom-app1 tom-lib2
-35 verbose dependent tom-app1 depends on tom-lib2
-36 silly isPackageDependentOf tom-app2 tom-app1
-37 silly isPackageDependentOf tom-lib1 tom-app1
-38 silly isPackageDependentOf tom-lib2 tom-app1
-39 silly isPackageDependentOf tom-app2 tom-app2
-40 silly isPackageDependentOf tom-lib1 tom-app2
-41 silly isPackageDependentOf tom-lib2 tom-app2
-42 silly isPackageDependentOf tom-app2 tom-lib1
-43 verbose dependent tom-app2 depends on tom-lib1
-44 silly isPackageDependentOf tom-app2 tom-lib2
-45 verbose dependent tom-app2 depends on tom-lib2
-46 silly isPackageDependentOf tom-lib1 tom-app1
-47 silly isPackageDependentOf tom-lib1 tom-app2
-48 silly isPackageDependentOf tom-lib1 tom-lib1
-49 silly isPackageDependentOf tom-lib1 tom-lib2
-50 silly isPackageDependentOf tom-lib2 tom-app1
-51 silly isPackageDependentOf tom-lib2 tom-app2
-52 silly isPackageDependentOf tom-lib2 tom-lib1
-53 silly isPackageDependentOf tom-lib2 tom-lib2
-54 silly collectUpdates
-55 verbose has filtered update tom-app1
-56 verbose has filtered update tom-app2
-57 verbose has filtered update tom-lib1
-58 verbose has filtered update tom-lib2
-59 silly initialize success
-60 silly execute attempt
-61 silly runScriptSync preversion tom-app1
-62 silly runScriptSync version tom-app1
-63 silly runScriptSync preversion tom-app2
-64 silly runScriptSync version tom-app2
-65 silly runScriptSync preversion tom-lib1
-66 silly runScriptSync version tom-lib1
-67 silly runScriptSync preversion tom-lib2
-68 silly runScriptSync version tom-lib2
-69 silly addFile /Users/trossi/demo/lerna-test/packages/app1/package.json
-70 silly addFile /Users/trossi/demo/lerna-test/packages/app2/package.json
-71 silly addFile /Users/trossi/demo/lerna-test/packages/lib1/package.json
-72 silly addFile /Users/trossi/demo/lerna-test/packages/lib2/package.json
-73 silly commit Publish
-73 silly commit
-73 silly commit  - tom-app1@1.0.1
-73 silly commit  - tom-app2@1.0.1
-73 silly commit  - tom-lib1@1.0.1
-73 silly commit  - tom-lib2@1.0.1
-74 verbose commit [ 'commit',
-74 verbose commit   '--no-gpg-sign',
-74 verbose commit   '-F',
-74 verbose commit   '/private/var/folders/56/hw3210h12j7fhc7p1lfwc_mmmt3hc8/T/d1466482-6cf0-4e3a-a591-b7b799aa69d3/lerna-commit.txt' ]
-75 silly addTag tom-app1@1.0.1
-76 silly addTag tom-app2@1.0.1
-77 silly addTag tom-lib1@1.0.1
-78 silly addTag tom-lib2@1.0.1
-79 silly runScriptSync postversion tom-app1
-80 silly runScriptSync postversion tom-app2
-81 silly runScriptSync postversion tom-lib1
-82 silly runScriptSync postversion tom-lib2
-83 info publish Publishing packages to npm...
-84 silly existsSync /Users/trossi/demo/lerna-test/packages/app1/scripts/prepublish.js
-85 verbose execScript No prepublish script found at /Users/trossi/demo/lerna-test/packages/app1/scripts/prepublish.js
-86 silly existsSync /Users/trossi/demo/lerna-test/packages/app2/scripts/prepublish.js
-87 verbose execScript No prepublish script found at /Users/trossi/demo/lerna-test/packages/app2/scripts/prepublish.js
-88 silly existsSync /Users/trossi/demo/lerna-test/packages/lib1/scripts/prepublish.js
-89 verbose execScript No prepublish script found at /Users/trossi/demo/lerna-test/packages/lib1/scripts/prepublish.js
-90 silly existsSync /Users/trossi/demo/lerna-test/packages/lib2/scripts/prepublish.js
-91 verbose execScript No prepublish script found at /Users/trossi/demo/lerna-test/packages/lib2/scripts/prepublish.js
-92 verbose publishing tom-lib1
-93 silly publishTaggedInDir latest lib1
-94 silly getExecOpts { cwd: '/Users/trossi/demo/lerna-test/packages/lib1' }
-95 verbose publishing tom-lib2
-96 silly publishTaggedInDir latest lib2
-97 silly getExecOpts { cwd: '/Users/trossi/demo/lerna-test/packages/lib2' }
-98 error publish Retrying failed publish: tom-lib1
-99 verbose publish error undefined
-100 verbose publishing tom-lib1
-101 silly publishTaggedInDir latest lib1
-102 silly getExecOpts { cwd: '/Users/trossi/demo/lerna-test/packages/lib1' }
-103 error publish Retrying failed publish: tom-lib2
-104 verbose publish error undefined
-105 verbose publishing tom-lib2
-106 silly publishTaggedInDir latest lib2
-107 silly getExecOpts { cwd: '/Users/trossi/demo/lerna-test/packages/lib2' }
-108 error publish Retrying failed publish: tom-lib1
-109 verbose publish error undefined
-110 verbose publishing tom-lib1
-111 silly publishTaggedInDir latest lib1
-112 silly getExecOpts { cwd: '/Users/trossi/demo/lerna-test/packages/lib1' }
-113 error publish Retrying failed publish: tom-lib2
-114 verbose publish error undefined
-115 verbose publishing tom-lib2
-116 silly publishTaggedInDir latest lib2
-117 silly getExecOpts { cwd: '/Users/trossi/demo/lerna-test/packages/lib2' }
-118 error publish Retrying failed publish: tom-lib1
-119 verbose publish error undefined
-120 verbose publishing tom-lib1
-121 silly publishTaggedInDir latest lib1
-122 silly getExecOpts { cwd: '/Users/trossi/demo/lerna-test/packages/lib1' }
-123 error publish Retrying failed publish: tom-lib2
-124 verbose publish error undefined
-125 verbose publishing tom-lib2
-126 silly publishTaggedInDir latest lib2
-127 silly getExecOpts { cwd: '/Users/trossi/demo/lerna-test/packages/lib2' }
-128 error publish Retrying failed publish: tom-lib1
-129 verbose publish error undefined
-130 verbose publishing tom-lib1
-131 silly publishTaggedInDir latest lib1
-132 silly getExecOpts { cwd: '/Users/trossi/demo/lerna-test/packages/lib1' }
-133 error publish Retrying failed publish: tom-lib2
-134 verbose publish error undefined
-135 verbose publishing tom-lib2
-136 silly publishTaggedInDir latest lib2
-137 silly getExecOpts { cwd: '/Users/trossi/demo/lerna-test/packages/lib2' }
-138 error publish Ran out of retries while publishing tom-lib1 Error: Command failed: npm publish --tag latest
-138 error publish npm ERR! Darwin 16.7.0
-138 error publish npm ERR! argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish" "--tag" "latest"
-138 error publish npm ERR! node v7.5.0
-138 error publish npm ERR! npm  v4.1.2
-138 error publish npm ERR! code ENEEDAUTH
-138 error publish
-138 error publish npm ERR! need auth auth required for publishing
-138 error publish npm ERR! need auth You need to authorize this machine using `npm adduser`
-138 error publish
-138 error publish npm ERR! Please include the following file with any support request:
-138 error publish npm ERR!     /Users/trossi/demo/lerna-test/packages/lib1/npm-debug.log
-138 error publish
-138 error publish     at Promise.all.then.arr (/usr/local/lib/node_modules/lerna/node_modules/execa/index.js:236:11)
-138 error publish     at process._tickCallback (internal/process/next_tick.js:103:7)
-139 error execute callback with error
-140 error Error: Command failed: npm publish --tag latest
-140 error npm ERR! Darwin 16.7.0
-140 error npm ERR! argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish" "--tag" "latest"
-140 error npm ERR! node v7.5.0
-140 error npm ERR! npm  v4.1.2
-140 error npm ERR! code ENEEDAUTH
-140 error
-140 error npm ERR! need auth auth required for publishing
-140 error npm ERR! need auth You need to authorize this machine using `npm adduser`
-140 error
-140 error npm ERR! Please include the following file with any support request:
-140 error npm ERR!     /Users/trossi/demo/lerna-test/packages/lib1/npm-debug.log
-140 error
-140 error     at Promise.all.then.arr (/usr/local/lib/node_modules/lerna/node_modules/execa/index.js:236:11)
+18 verbose hasTags true
+19 silly getLastTag
+20 verbose getLastTag tom-app1@1.0.7
+21 info Comparing with tom-app1@1.0.7.
+22 silly diffSinceIn tom-app1@1.0.7 packages/app1
+23 silly diff
+24 silly diffSinceIn tom-app1@1.0.7 packages/app2
+25 silly diff packages/app2/package.json
+26 silly diffSinceIn tom-app1@1.0.7 packages/lib1
+27 silly diff
+28 silly diffSinceIn tom-app1@1.0.7 packages/lib2
+29 silly diff packages/lib2/index.js
+30 verbose updated tom-app2
+31 verbose updated tom-lib2
+32 info Checking for prereleased packages...
+33 silly collectDependents
+34 silly isPackageDependentOf tom-app1 tom-app2
+35 silly isPackageDependentOf tom-lib2 tom-app2
+36 silly isPackageDependentOf tom-app1 tom-lib2
+37 verbose dependent tom-app1 depends on tom-lib2
+38 silly isPackageDependentOf tom-app2 tom-app2
+39 silly isPackageDependentOf tom-lib1 tom-app2
+40 silly isPackageDependentOf tom-lib2 tom-app2
+41 silly isPackageDependentOf tom-app2 tom-lib2
+42 verbose dependent tom-app2 depends on tom-lib2
+43 silly isPackageDependentOf tom-lib1 tom-app2
+44 silly isPackageDependentOf tom-lib1 tom-lib2
+45 silly isPackageDependentOf tom-lib2 tom-app2
+46 silly isPackageDependentOf tom-lib2 tom-lib2
+47 silly collectUpdates
+48 verbose has filtered update tom-app1
+49 verbose has filtered update tom-app2
+50 verbose has filtered update tom-lib2
+51 silly initialize success
+52 silly execute attempt
+53 silly runScriptSync preversion tom-app1
+54 silly runScriptSync version tom-app1
+55 silly runScriptSync preversion tom-app2
+56 silly runScriptSync version tom-app2
+57 silly runScriptSync preversion tom-lib2
+58 silly runScriptSync version tom-lib2
+59 silly addFile /Users/trossi/demo/lerna-test/packages/app1/package.json
+60 silly addFile /Users/trossi/demo/lerna-test/packages/app2/package.json
+61 silly addFile /Users/trossi/demo/lerna-test/packages/lib2/package.json
+62 silly commit Publish
+62 silly commit
+62 silly commit  - tom-app1@1.0.8
+62 silly commit  - tom-app2@1.0.7
+62 silly commit  - tom-lib2@1.0.4
+63 verbose commit [ 'commit',
+63 verbose commit   '--no-gpg-sign',
+63 verbose commit   '-F',
+63 verbose commit   '/private/var/folders/56/hw3210h12j7fhc7p1lfwc_mmmt3hc8/T/6d27beed-16cb-45fe-bbef-8ee1e70015c1/lerna-commit.txt' ]
+64 silly addTag tom-app1@1.0.8
+65 silly addTag tom-app2@1.0.7
+66 error execute caught error
+67 error Error: fatal: tag 'tom-app2@1.0.7' already exists
+67 error
+67 error     at Function.module.exports.sync (/usr/local/lib/node_modules/lerna/node_modules/execa/index.js:303:26)
+67 error     at Function.execSync (/usr/local/lib/node_modules/lerna/lib/ChildProcessUtilities.js:59:30)
+67 error     at Function.addTag (/usr/local/lib/node_modules/lerna/lib/GitUtilities.js:94:39)
+67 error     at /usr/local/lib/node_modules/lerna/lib/commands/PublishCommand.js:728:39
+67 error     at Array.forEach (native)
+67 error     at PublishCommand.gitCommitAndTagVersionForUpdates (/usr/local/lib/node_modules/lerna/lib/commands/PublishCommand.js:727:12)
+67 error     at PublishCommand.commitAndTagUpdates (/usr/local/lib/node_modules/lerna/lib/commands/PublishCommand.js:702:26)
+67 error     at PublishCommand.execute (/usr/local/lib/node_modules/lerna/lib/commands/PublishCommand.js:307:14)
