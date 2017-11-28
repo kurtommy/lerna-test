@@ -1,0 +1,109 @@
+0 silly input []
+1 silly flags { _: [ 'bootstrap' ],
+1 silly flags   'reject-cycles': false,
+1 silly flags   rejectCycles: false,
+1 silly flags   args: [] }
+2 verbose rootPath /Users/trossi/demo/lerna-test
+3 info version 2.5.1
+4 info versioning independent
+5 silly existsSync /Users/trossi/demo/lerna-test/VERSION
+6 silly initialize attempt
+7 silly npmConfig { registry: undefined,
+7 silly npmConfig   npmClient: undefined,
+7 silly npmConfig   npmClientArgs: undefined,
+7 silly npmConfig   mutex: undefined }
+8 silly initialize success
+9 silly execute attempt
+10 info Bootstrapping 4 packages
+11 info lifecycle preinstall
+12 silly runScript preinstall tom-app1
+13 silly tom-app1
+14 silly runScript preinstall tom-app2
+15 silly tom-app2
+16 silly runScript preinstall tom-lib1
+17 silly tom-lib1
+18 silly runScript preinstall tom-lib2
+19 silly tom-lib2
+20 silly hasDependencyInstalled tom-app1 lib1
+21 silly dependencyIsSatisfied [ 'lib1',
+21 silly dependencyIsSatisfied   '^1.0.0',
+21 silly dependencyIsSatisfied   '/Users/trossi/demo/lerna-test/packages/app1/node_modules' ]
+22 verbose dependencyIsSatisfied lib1 false
+23 silly hasDependencyInstalled tom-app2 lib1
+24 silly dependencyIsSatisfied [ 'lib1',
+24 silly dependencyIsSatisfied   '^1.0.0',
+24 silly dependencyIsSatisfied   '/Users/trossi/demo/lerna-test/packages/app2/node_modules' ]
+25 verbose dependencyIsSatisfied lib1 false
+26 silly hasDependencyInstalled tom-app1 lib2
+27 silly dependencyIsSatisfied [ 'lib2',
+27 silly dependencyIsSatisfied   '^1.0.0',
+27 silly dependencyIsSatisfied   '/Users/trossi/demo/lerna-test/packages/app1/node_modules' ]
+28 verbose dependencyIsSatisfied lib2 false
+29 silly hasDependencyInstalled tom-app2 lib2
+30 silly dependencyIsSatisfied [ 'lib2',
+30 silly dependencyIsSatisfied   '^1.0.0',
+30 silly dependencyIsSatisfied   '/Users/trossi/demo/lerna-test/packages/app2/node_modules' ]
+31 verbose dependencyIsSatisfied lib2 false
+32 silly root dependencies []
+33 silly leaf dependencies {
+33 silly leaf dependencies   "tom-app1": [
+33 silly leaf dependencies     {
+33 silly leaf dependencies       "dependency": "lib1@^1.0.0",
+33 silly leaf dependencies       "isSatisfied": false
+33 silly leaf dependencies     },
+33 silly leaf dependencies     {
+33 silly leaf dependencies       "dependency": "lib2@^1.0.0",
+33 silly leaf dependencies       "isSatisfied": false
+33 silly leaf dependencies     }
+33 silly leaf dependencies   ],
+33 silly leaf dependencies   "tom-app2": [
+33 silly leaf dependencies     {
+33 silly leaf dependencies       "dependency": "lib1@^1.0.0",
+33 silly leaf dependencies       "isSatisfied": false
+33 silly leaf dependencies     },
+33 silly leaf dependencies     {
+33 silly leaf dependencies       "dependency": "lib2@^1.0.0",
+33 silly leaf dependencies       "isSatisfied": false
+33 silly leaf dependencies     }
+33 silly leaf dependencies   ]
+33 silly leaf dependencies }
+34 info Installing external dependencies
+35 verbose actions 2 actions, concurrency 4
+36 silly installInDir app1 [ 'lib1@^1.0.0', 'lib2@^1.0.0' ]
+37 silly installInDir backup /Users/trossi/demo/lerna-test/packages/app1/package.json
+38 silly rename [ '/Users/trossi/demo/lerna-test/packages/app1/package.json',
+38 silly rename   '/Users/trossi/demo/lerna-test/packages/app1/package.json.lerna_backup' ]
+39 silly installInDir app2 [ 'lib1@^1.0.0', 'lib2@^1.0.0' ]
+40 silly installInDir backup /Users/trossi/demo/lerna-test/packages/app2/package.json
+41 silly rename [ '/Users/trossi/demo/lerna-test/packages/app2/package.json',
+41 silly rename   '/Users/trossi/demo/lerna-test/packages/app2/package.json.lerna_backup' ]
+42 silly installInDir writing tempJson { dependencies: { lib1: '^1.0.0', lib2: '^1.0.0' } }
+43 silly installInDir writing tempJson { dependencies: { lib1: '^1.0.0', lib2: '^1.0.0' } }
+44 silly getExecOpts { cwd: '/Users/trossi/demo/lerna-test/packages/app1' }
+45 silly installInDir [ 'npm', [ 'install' ] ]
+46 silly getExecOpts { cwd: '/Users/trossi/demo/lerna-test/packages/app2' }
+47 silly installInDir [ 'npm', [ 'install' ] ]
+48 silly installInDir cleanup /Users/trossi/demo/lerna-test/packages/app1/package.json
+49 silly renameSync [ '/Users/trossi/demo/lerna-test/packages/app1/package.json.lerna_backup',
+49 silly renameSync   '/Users/trossi/demo/lerna-test/packages/app1/package.json' ]
+50 verbose installed leaf tom-app1
+51 error execute callback with error
+52 error Error: Command failed: npm install
+52 error npm ERR! Darwin 16.7.0
+52 error npm ERR! argv "/usr/local/bin/node" "/usr/local/bin/npm" "install"
+52 error npm ERR! node v7.5.0
+52 error npm ERR! npm  v4.1.2
+52 error npm ERR! code ETARGET
+52 error
+52 error npm ERR! notarget No compatible version found: lib1@^1.0.0
+52 error npm ERR! notarget Valid install targets:
+52 error npm ERR! notarget 0.0.1
+52 error npm ERR! notarget
+52 error npm ERR! notarget This is most likely not a problem with npm itself.
+52 error npm ERR! notarget In most cases you or one of your dependencies are requesting
+52 error npm ERR! notarget a package version that doesn't exist.
+52 error
+52 error npm ERR! Please include the following file with any support request:
+52 error npm ERR!     /Users/trossi/demo/lerna-test/packages/app1/npm-debug.log
+52 error
+52 error     at Promise.all.then.arr (/usr/local/lib/node_modules/lerna/node_modules/execa/index.js:236:11)
