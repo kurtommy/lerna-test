@@ -1,6 +1,6 @@
 {
   "name": "tom-lib1",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "tom-lib2": "^1.0.10"
+    "tom-lib2": "^1.0.11"
   }
 }
