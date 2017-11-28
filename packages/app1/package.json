@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "lib1": "^1.0.0",
-    "lib2": "^1.0.0"
+    "tom-lib1": "^1.0.0",
+    "tom-lib2": "^1.0.0"
   }
 }

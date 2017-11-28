@@ -79,9 +79,9 @@
 41 silly rename   '/Users/trossi/demo/lerna-test/packages/app2/package.json.lerna_backup' ]
 42 silly installInDir writing tempJson { dependencies: { lib1: '^1.0.0', lib2: '^1.0.0' } }
 43 silly installInDir writing tempJson { dependencies: { lib1: '^1.0.0', lib2: '^1.0.0' } }
-44 silly getExecOpts { cwd: '/Users/trossi/demo/lerna-test/packages/app1' }
+44 silly getExecOpts { cwd: '/Users/trossi/demo/lerna-test/packages/app2' }
 45 silly installInDir [ 'npm', [ 'install' ] ]
-46 silly getExecOpts { cwd: '/Users/trossi/demo/lerna-test/packages/app2' }
+46 silly getExecOpts { cwd: '/Users/trossi/demo/lerna-test/packages/app1' }
 47 silly installInDir [ 'npm', [ 'install' ] ]
 48 silly installInDir cleanup /Users/trossi/demo/lerna-test/packages/app1/package.json
 49 silly renameSync [ '/Users/trossi/demo/lerna-test/packages/app1/package.json.lerna_backup',
@@ -95,9 +95,9 @@
 52 error npm ERR! npm  v4.1.2
 52 error npm ERR! code ETARGET
 52 error
-52 error npm ERR! notarget No compatible version found: lib1@^1.0.0
+52 error npm ERR! notarget No compatible version found: lib2@^1.0.0
 52 error npm ERR! notarget Valid install targets:
-52 error npm ERR! notarget 0.0.1
+52 error npm ERR! notarget 0.0.1, 0.0.2, 0.0.3, 0.0.4
 52 error npm ERR! notarget
 52 error npm ERR! notarget This is most likely not a problem with npm itself.
 52 error npm ERR! notarget In most cases you or one of your dependencies are requesting
