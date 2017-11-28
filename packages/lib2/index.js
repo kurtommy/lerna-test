@@ -1,3 +1,3 @@
 module.exports = function(a) {
-  console.log("lib 2 mod 10", a);
+  console.log("lib 2 mod 10 xx", a);
 };
