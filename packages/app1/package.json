@@ -10,6 +10,6 @@
   "license": "ISC",
   "dependencies": {
     "tom-lib1": "1.0.4",
-    "tom-lib2": "1.0.5"
+    "tom-lib2": "^1.0.0"
   }
 }
